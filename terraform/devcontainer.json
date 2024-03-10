@@ -1,0 +1,30 @@
+{
+    "name": "Terraform",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "ubuntu-22.04",
+            "TERRAFORM_VERSION": "1.5.5",
+            "TERRAGRUNT_VERSION": "0.55.13",
+            "TERRAFORM_DOCS_VERSION": "0.16.0"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "editor.formatOnPaste": false,
+                "editor.formatOnType": false,
+                "editor.formatOnSave": true,
+                "editor.formatOnSaveMode": "file",
+                "files.autoSave": "off"
+            },
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "hashicorp.terraform",
+                "HashiCorp.HCL",
+                "oderwat.indent-rainbow"
+            ]
+        }
+    }
+    // "remoteUser": "vscode"
+}
